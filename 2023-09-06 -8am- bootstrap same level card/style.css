@@ -1,0 +1,39 @@
+
+/* ############# card ටික එක height එකකට අරන් button ටිකත් එක level එකකට ගැනීම..########################## */
+
+
+/* card වල ඇතුලේ content අනුව උස වෙනස් .. ඒ නිසා ඉස්සෙල්ලම card ටික එක height එකකට ගත්ත height :100% වලින්  */
+.card{
+  height:100% ;
+}
+
+/* .card-text එක  flex-grow: 1; කිරීම සදහායි card body එක flex එකක් කලේ .. */
+.card-body{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* .card-text එකේ හිස් ඉඩ පහල card එකේ උසටම පහලට push කිරීමට flex-grow: 1; .. */
+.card-text{
+  flex-grow: 1;
+}
+
+
+
+/* ####################################### */
+
+/* .img-fit is a custom class, aspect-ratio: 16/9; සහ object-fit: cover; විදහට image size සාමාන්‍ය අවස්ථාවේදී තියන්න ...
+  */
+.card .img-fit{
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+/* 767.98 අඩු screen වලදී aspect-ratio: 1.45/1 ; කරලා උස පොඩ්ඩක් වැඩි කලා.. */
+@media (max-width: 767.98) {
+  .card .img-fit{
+    aspect-ratio: 1.45/1;   
+  }
+}
+
